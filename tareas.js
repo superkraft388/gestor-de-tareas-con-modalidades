@@ -11,7 +11,7 @@ class Tarea {
     validarFechaLimite(fecha) {
         const fechaValida = new Date(fecha);
         if (isNaN(fechaValida.getTime())) {
-            throw new Error('Fecha límite inválida');
+            throw new Error(`Fecha límite inválida: ${fecha}`);
         }
         return fechaValida;
     }
