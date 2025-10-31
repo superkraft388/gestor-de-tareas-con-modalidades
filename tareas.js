@@ -4,8 +4,16 @@ class Tarea {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.fechaLimite = fechaLimite;
+        this.fechaLimite = this.validarFechaLimite(fechaLimite);
         this.modalidad = modalidad;
+    }
+
+    validarFechaLimite(fecha) {
+        const fechaValida = new Date(fecha);
+        if (isNaN(fechaValida.getTime())) {
+            throw new Error('Fecha límite inválida');
+        }
+        return fechaValida;
     }
 }
 
