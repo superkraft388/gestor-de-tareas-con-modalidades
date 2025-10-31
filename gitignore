@@ -4,7 +4,6 @@ dist/
 build/
 logs/
 coverage/
-coverage-final.json
 tmp/
 *.log
 .DS_Store
