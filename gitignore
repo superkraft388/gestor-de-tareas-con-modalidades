@@ -5,3 +5,5 @@ build/
 logs/
 coverage/
 coverage-final.json
+tmp/
+*.log
