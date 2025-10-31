@@ -4,11 +4,11 @@ class Tarea {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.fechaLimite = this.validarFechaLimite(fechaLimite);
+        this.fechaLimite = this.validarFecha(fechaLimite);
         this.modalidad = modalidad;
     }
 
-    validarFechaLimite(fecha) {
+    validarFecha(fecha) {
         const fechaValida = new Date(fecha);
         if (isNaN(fechaValida.getTime())) {
             throw new Error(`Fecha límite inválida: ${fecha}`);
