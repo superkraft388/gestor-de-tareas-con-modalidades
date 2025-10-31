@@ -15,6 +15,10 @@ class Tarea {
         }
         return fechaValida;
     }
+
+    obtenerResumen() {
+        return `Tarea: ${this.nombre}, Descripción: ${this.descripcion}, Fecha Límite: ${this.fechaLimite.toLocaleDateString()}, Modalidad: ${this.modalidad}`;
+    }
 }
 
 module.exports = Tarea;
