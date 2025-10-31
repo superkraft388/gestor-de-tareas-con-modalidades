@@ -27,7 +27,7 @@ app.put('/tareas/:id', (req, res) => {
         tareas[index] = { ...tareas[index], ...req.body };
         return res.json(tareas[index]);
     }
-    res.status(404).send('Task not found'); // Updated error message
+    res.status(404).send('Tarea no encontrada'); // Updated error message
 });
 
 app.delete('/tareas/:id', (req, res) => {
